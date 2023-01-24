@@ -31,14 +31,19 @@ const Members = () => {
   )
 }
 
-const MemberComponent = () => {
+const MemberComponent = ({ professional = false }) => {
+  const [example,_] = React.useState(
+    professional
+    ? [1,2,3,4,5,6,7,8]
+    : [1,2,3,4]);
+
   return (
     <Header
       title="Interyes Professional"
       subtitle="Talented team behind our success in all our projects. Dream your interior and
       our professional make your dream true">
         <div className="grid grid-cols-1 md:max-2xl:grid-cols-4 gap-4">
-          {[1,2,3,4].map(m => (
+          {example.map(m => (
             <Members key={m} />
           ))}
         </div>

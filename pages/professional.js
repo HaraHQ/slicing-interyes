@@ -14,7 +14,7 @@ const AboutPage = () => {
       title="Interyes Pro Team Members"
       header={{ title: "Our Professionals", segments: ["Home","Our Professionals"]}}>
       <section className="px-8 my-12 py-2">
-        <MemberComponent />
+        <MemberComponent professional />
       </section>
     </PageLayout>
   )
